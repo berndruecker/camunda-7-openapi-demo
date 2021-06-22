@@ -95,6 +95,7 @@
               <inputSpec>/openapi.json</inputSpec>
               <generatorName>java</generatorName>
               <configOptions>
+                <dateLibrary>legacy</dateLibrary>
                 <sourceFolder>src/gen/java/main</sourceFolder>
               </configOptions>
             </configuration>
