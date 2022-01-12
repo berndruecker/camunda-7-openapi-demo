@@ -39,6 +39,7 @@ abstract class App {
             true,
             true,
             "benchmark",
+            null,
             new File(App.class.getClassLoader().getResource(bpmnXmlPath).getFile())
     );
     System.out.println("DEPLOYED");

@@ -16,7 +16,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <version.camunda>7.15.0</version.camunda>
+    <version.camunda>7.16.0</version.camunda>
   </properties>
 
   <dependencies>
