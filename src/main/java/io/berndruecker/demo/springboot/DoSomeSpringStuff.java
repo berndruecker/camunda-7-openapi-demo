@@ -1,6 +1,7 @@
 package io.berndruecker.demo.springboot;
 
 import io.berndruecker.demo.springboot.starter.CamundaApi;
+import io.berndruecker.demo.springboot.starter.CamundaHistoryApi;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.api.ProcessDefinitionApi;
 import org.openapitools.client.model.StartProcessInstanceDto;
@@ -23,6 +24,8 @@ public class DoSomeSpringStuff {
 
     @Autowired private ProcessDefinitionApi processDefinitionApi; // or diorectly this
 
+    @Autowired private CamundaHistoryApi camundaHistoryApi;
+
     @PostConstruct
     public void doSomething() throws ApiException {
         camundaApi.deploymentApi().createDeployment(
@@ -42,5 +45,12 @@ public class DoSomeSpringStuff {
                         .variables(Collections.singletonMap("json", new VariableValueDto().value("test").type("string"))));
 
         System.out.println("STARTED");
+
+        System.out.println("QUERIED: " +
+            camundaHistoryApi.historicProcessInstanceApi().queryHistoricProcessInstances(
+                null,
+                null,
+                null));
+
     }
 }
