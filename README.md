@@ -1,3 +1,5 @@
+[![Camunda Platform 7](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%207-26d07c)](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%207-26d07c)
+
 # Use Camunda OpenAPI via auto-generated Java client
 
 Small demo, that creates a Java client for the Camunda REST API via the provided OpenAPI file on the fly using a Maven Plugin: 
